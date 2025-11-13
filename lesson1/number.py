@@ -12,22 +12,29 @@
 `.substract(<значение>)` вычитает указанное число из value
 """
 
+
 class Number:
+    """Класс для номера"""
+    value: int
 
     def __init__(self, value):
-        ...
+        """Метод для инициализации экземпляра класса. Задаем значения атрибутам экземпляра."""
+        self.value = value
 
-    def ...(self):
-        ...
+    def get(self):
+        """Возвращает нужное число"""
+        return self.value
 
-    def ...:
-        ...
+    def add(self, number):
+        """Добовляет к нужному числу"""
+        self.value += number
 
-    def ...:
-        ...
+    def substract(self, number):
+        """Вычитает указанное число из текущего значения."""
+        self.value -= number
 
 
-# код для проверки 
+# код для проверки
 n = Number(7)
 print(n.get())  # 7
 n.add(3)

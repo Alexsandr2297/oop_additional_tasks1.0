@@ -11,10 +11,27 @@
 
 
 class Person:
-    pass
+    name: str
+    age: int
 
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-# код для проверки 
+    def display(self):
+        print(f"{self.name} is {self.age} years old")
+
+    @classmethod
+    def from_birth_year(cls, name, brith_year):
+        current_year = 2023
+        age = current_year - brith_year
+        return cls(name, age)
+
+    @staticmethod
+    def is_adult(age):
+        return age >= 18
+
+# код для проверки
 person1 = Person("John", 28)
 person1.display()  # John is 28 years old
 
